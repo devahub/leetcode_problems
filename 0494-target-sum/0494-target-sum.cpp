@@ -11,12 +11,12 @@ class Solution
             if (i >= nums.size())
                 return 0;
 
-            if (dp[i][target + 2000] != -1)
+            if (dp[i][target + 1000] != -1)
             {
-                return dp[i][target + 2000];
+                return dp[i][target + 1000];
             }
             
-            return dp[i][target + 2000] = solve(nums, target - nums[i], i + 1, dp) +                            solve(nums, target + nums[i], i + 1, dp);
+            return dp[i][target + 1000] = solve(nums, target - nums[i], i + 1, dp) +                            solve(nums, target + nums[i], i + 1, dp);
         }
 
 
