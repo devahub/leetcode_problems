@@ -42,26 +42,20 @@ public:
 //         return d1;
      
         
+      // using map ---->
         
-        
-        ListNode* t1=head1;
-        ListNode* t2=head2;
-        
-        while(t1!=t2){
-            if(t1==NULL){
-                t1=head2;
-            }
-            else{
-                t1=t1->next;
-            }
-            if(t2==NULL){
-                t2=head1;
-            }
-            else{
-                t2=t2->next;
-            }
-            
+        unordered_map<ListNode*,int>mp;
+        while(head1!=NULL){
+            mp[head1]++;
+            head1=head1->next;
         }
-        return t1;
+      while(head2!=NULL){
+          if(mp[head2]>0){
+              return head2;
+              
+          }
+          head2=head2->next;
+      }
+        return NULL;
     }
 };
