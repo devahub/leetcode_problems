@@ -19,3 +19,15 @@ class Solution
             return v;
         }
 };
+    
+    
+    
+    // boyer's moore algo--->
+    
+    
+    
+//  vector<int> majorityElement(vector<int> &nums){
+     
+     
+//  }
+// };
