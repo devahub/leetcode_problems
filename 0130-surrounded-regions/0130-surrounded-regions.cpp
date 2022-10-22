@@ -5,7 +5,7 @@ public:
     
     void dfs(vector<vector<char>>& board,vector<vector<bool>>&vis,int i,int j){
     
-        if (min(i, j) < 0 || i >= board.size() || j >= board[0].size() || vis[i][j]) 
+        if (min(i, j) < 0 || i >= board.size() || j >= board[0].size() || vis[i][j]==true) 
             return;
         if (board[i][j] == 'X') 
             return;
@@ -18,8 +18,6 @@ public:
     }
     
     void solve(vector<vector<char>>& board) {
-        if (!board.size())
-            return;
         
         vector<vector<bool>> vis(board.size(), vector<bool>(board[0].size(), false));
         for (int i=0; i<board.size(); i++) {
