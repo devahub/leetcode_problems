@@ -56,15 +56,15 @@ class Solution
             dummy->next = head;
 
             ListNode *cur = dummy, *nex = dummy, *pre = dummy;
-            int c = 0;
+            int l = 0;
 
             while (cur->next != NULL)
             {
                 cur = cur->next;
-                c++;
+                l++;
             }
 
-            while (k <= c)
+            while (k <= l)
             {
                 cur = pre->next;
                 nex = cur->next;
@@ -76,7 +76,7 @@ class Solution
                     nex = cur->next;
                 }
                 pre = cur;
-                c = c - k;
+                l = l - k;
             }
             return dummy->next;
         }
