@@ -31,7 +31,7 @@ class Solution
    	//     ListNode* rotateRight(ListNode* head, int k) {
    	//         if(head==NULL)return 0;
 
-   	//         vector < int>v;
+   	//         vector <int>v;
 
    	//         ListNode* cur=head;
 
@@ -56,6 +56,7 @@ class Solution
     
     
    	// optimal solution---->refer to striver
+    // first we are making the linked list circular by connecting last node with the head and then we are moving 3 steps and when we reach 4 we break connection between 3 and 4 and start from 4->5->1->2->3
    	//  1->2->3->4->5          let k=2;
    	//   l=5             5-2=3            ans===>   4->5->1->2->3
 
@@ -76,17 +77,17 @@ class Solution
                 cur = cur->next;
             }
 
-            cur->next = head;
+            cur->next = head;       // connecting 5 with 1 making it circular
             k = k % l;
             k = l - k;
 
-            while (k--)
+            while (k--)             
             {
                 cur = cur->next;
             }
 
             head = cur->next;
-            cur->next = NULL;
+            cur->next = NULL;           // 3 connected to null
 
             return head;
         }
