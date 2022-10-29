@@ -1,24 +1,6 @@
 class Solution {
 public:
     
-//   vector<vector<int>> subsets(vector<int>& nums) {
-//         int n=nums.size();
-//         vector<vector<int>>ans;
-//         ans.push_back({});
-        
-        
-//         for(int i=0;i<n;i++){
-//             int size=ans.size();
-            
-//             for(int j=0;j<size;j++){
-//                 vector<int>v=ans[j];
-//                 v.push_back(nums[i]);
-//                 ans.push_back(v);    
-//             }
-//         }
-//     return ans;
-//     }
-// };
 
 
 //     vector<vector<int>>ans;
@@ -49,22 +31,48 @@ public:
     
  //   approach--3>
    
-    vector<vector<int>>ans;
-    void helper(int index, vector<int>&current,vector<int>&nums)
-    {
-        ans.push_back(current); 
+//     vector<vector<int>>ans;
+//     void helper(int index, vector<int>&current,vector<int>&nums)
+//     {
+//         ans.push_back(current); 
         
-        for(int i=index;i<nums.size();i++)
-        {
-            current.push_back(nums[i]); 
-            helper(i+1,current,nums); 
-            current.pop_back(); 
-        }
-        return;
-    }
-    vector<vector<int>> subsets(vector<int>& nums) {
-        vector<int>current;
-        helper(0,current,nums);
-        return ans; 
-    }
+//         for(int i=index;i<nums.size();i++)
+//         {
+//             current.push_back(nums[i]); 
+//             helper(i+1,current,nums); 
+//             current.pop_back(); 
+//         }
+//         return;
+//     }
+//     vector<vector<int>> subsets(vector<int>& nums) {
+//         vector<int>current;
+//         helper(0,current,nums);
+//         return ans; 
+//     }
+// };
+    
+    
+    
+    
+    // iterative soln--->
+    //use two for loops and complete  iterations for every value of i 
+    
+      vector<vector<int>> subsets(vector<int>& nums){
+          int n=nums.size();
+          vector<vector<int>>ans;
+          ans.push_back({});
+          
+          for(int i=0;i<n;i++){
+              int size=ans.size();
+              
+              for(int j=0;j<size;j++){
+                  vector<int>temp=ans[j];
+                  temp.push_back(nums[i]);
+                  ans.push_back(temp);
+                  
+              }
+          }
+          
+          return ans;
+      }
 };
