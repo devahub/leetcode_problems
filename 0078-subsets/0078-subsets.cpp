@@ -92,15 +92,12 @@ public:
             solve(nums,v,i+1);
             v.pop_back();
         }
-        return;
         
     }
     
   vector<vector<int>> subsets(vector<int>& nums){
-     vector<int>v;
+      vector<int>v;
       solve(nums,v,0);
-      return ans;
-      
-      
+      return ans; 
   }
 };
