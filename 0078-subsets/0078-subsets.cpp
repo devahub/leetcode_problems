@@ -57,22 +57,50 @@ public:
     // iterative soln--->
     //use two for loops and complete  iterations for every value of i 
     
-      vector<vector<int>> subsets(vector<int>& nums){
-          int n=nums.size();
-          vector<vector<int>>ans;
-          ans.push_back({});
+//       vector<vector<int>> subsets(vector<int>& nums){
+//           int n=nums.size();
+//           vector<vector<int>>ans;
+//           ans.push_back({});
           
-          for(int i=0;i<n;i++){
-              int size=ans.size();
+//           for(int i=0;i<n;i++){
+//               int size=ans.size();
               
-              for(int j=0;j<size;j++){
-                  vector<int>temp=ans[j];
-                  temp.push_back(nums[i]);
-                  ans.push_back(temp);
+//               for(int j=0;j<size;j++){
+//                   vector<int>temp=ans[j];
+//                   temp.push_back(nums[i]);
+//                   ans.push_back(temp);
                   
-              }
-          }
+//               }
+//           }
           
-          return ans;
-      }
+//           return ans;
+//       }
+// };
+
+
+    
+    // recurssive solution----->
+    
+    vector<vector<int>>ans;
+    void solve(vector<int>& nums,vector<int>& v,int index){
+        
+       
+            ans.push_back(v);
+        
+        for(int i=index;i<nums.size();i++){
+            v.push_back(nums[i]);
+            solve(nums,v,i+1);
+            v.pop_back();
+        }
+        return;
+        
+    }
+    
+  vector<vector<int>> subsets(vector<int>& nums){
+     vector<int>v;
+      solve(nums,v,0);
+      return ans;
+      
+      
+  }
 };
