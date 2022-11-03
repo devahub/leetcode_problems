@@ -2,37 +2,38 @@ class Solution {
 public:
 
     
-//     int longestPalindrome(vector<string>& words) {
-//         unordered_map<string,int>mp;
-//         int ans=0,m=0;
-//         bool flag=false;
+    int longestPalindrome(vector<string>& words) {
+        unordered_map<string,int>mp;
+        int ans=0,m=0;
+        bool flag=false;
 
-//         for(auto i:words){
-//             mp[i]++;
-//         }
+        for(auto i:words){
+            mp[i]++;
+        }
         
-//         for(auto i:mp){
-//             string s=i.first;
-//             string t=s;
-//             reverse(s.begin(),s.end());
-//             if(s==t){
-//                ans+=i.second/2;
-//                 if(i.second%2)      // if occuring even no of times
-//                 flag=true;
-//         }
-//         else
-//         {
-//             if(mp.count(s))
-//                 ans+=min(i.second,mp[s]),mp.erase(s);
-//         }
-//     }
-//     ans=ans*4;                  
-//     if(flag==true) 
-//         ans+=2;
-//     return ans;
-// }
+        for(auto i:mp){
+            string s=i.first;
+            string t=s;
+            reverse(s.begin(),s.end());
+            if(s==t){
+               ans+=i.second/2;
+               if(i.second%2)      // if occuring even no of times
+                flag=true;
+        }
+        else
+        {
+            if(mp.count(s))
+                ans+=min(i.second,mp[s]);
+                mp.erase(s);
+        }
+    }
+    ans=ans*4;                  
+    if(flag==true) 
+        ans+=2;
+    return ans;
+}
 
-// };
+};
             
 
 
@@ -48,41 +49,41 @@ public:
     
     
     
-     int longestPalindrome(vector<string>& words){
-         map<string,int>mp;
-         int ans=0;
-         bool flag=false;
-         int len=0;
+//      int longestPalindrome(vector<string>& words){
+//          map<string,int>mp;
+//          int ans=0;
+//          bool flag=false;
+//          int len=0;
          
-         for(auto i:words){
-             mp[i]++;
-         }
+//          for(auto i:words){
+//              mp[i]++;
+//          }
          
-         for(auto i:mp){
-             if(i.first[0]==i.first[1]){
-                 if(i.second%2!=0){
-                     flag=true;
-                     len+=i.second-1;
-                 }
-                 else{
-                     len+=i.second;
-                 }
-                 mp.erase(i.first);
-             }
-             else{
-                 string s=i.first;
-                 reverse(s.begin(),s.end());
-                 if(mp.find(s)!=mp.end()){
-                     ans+=min(mp[s],i.second)*4;
-                 }
-                 mp.erase(s);
-                 mp.erase(i.first);
-             }
-         }
+//          for(auto i:mp){
+//              if(i.first[0]==i.first[1]){
+//                  if(i.second%2!=0){
+//                      flag=true;
+//                      len+=i.second-1;
+//                  }
+//                  else{
+//                      len+=i.second;
+//                  }
+//                  mp.erase(i.first);
+//              }
+//              else{
+//                  string s=i.first;
+//                  reverse(s.begin(),s.end());
+//                  if(mp.find(s)!=mp.end()){
+//                      ans+=min(mp[s],i.second)*4;
+//                  }
+//                  mp.erase(s);
+//                  mp.erase(i.first);
+//              }
+//          }
        
-         if(flag){
-             return ans+len*2+2;
-         }
-         return ans+len*2;
-     }
-};
+//          if(flag){
+//              return ans+len*2+2;
+//          }
+//          return ans+len*2;
+//      }
+// };
