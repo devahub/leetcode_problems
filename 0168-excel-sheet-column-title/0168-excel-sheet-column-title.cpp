@@ -63,14 +63,14 @@ class Solution
 // approach-2
 
  string convertToTitle(int col) {
-        string s="";
-        while(col>0){
-            col--;
-            int a=col%26;
-            s+=('A'+a);
-            col=col/26;
-        }
-        reverse(s.begin(),s.end());
-        return s;
+     string s="";  
+     while(col>0){
+           col--;
+         int a=col%26;
+         s+='A'+a;
+         col=col/26;
+       }
+     reverse(s.begin(),s.end());
+     return s;
     }
 };
