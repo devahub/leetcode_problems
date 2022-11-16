@@ -52,6 +52,7 @@ class Solution
         ListNode *res=head;
         ListNode *cur=head;
         int sum=0;
+        
         while(cur!=NULL){
             if(cur->val!=0){
                 sum+=cur->val;
