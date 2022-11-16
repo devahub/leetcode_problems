@@ -21,7 +21,7 @@ public:
 // };
     
     
-    //             approach-2---->
+    //             approach-2----> removing numbers mini and maxi 
     
 //      int distinctAverages(vector<int>& nums) {
 //         set<float> res;
