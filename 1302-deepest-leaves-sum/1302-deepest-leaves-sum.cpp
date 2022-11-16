@@ -35,7 +35,7 @@ public:
         q.push(root);
         
         while(!q.empty()){
-            sum=0;
+            sum=0;   // initialised with 0 so that last it returns the sum when it is last level
             
             int size=q.size();
             
