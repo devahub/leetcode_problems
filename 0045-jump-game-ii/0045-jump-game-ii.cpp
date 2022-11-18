@@ -1,6 +1,10 @@
 class Solution {
 public:
     int solve(int i,vector<int>&nums,vector<int>&dp){
+//   if we are on index i in nums array then we try to reach the last index on nums with no. of jumps allowed. If we are able to reach the last index we add one to our answer.
+        
+// If the last index i is not reachable from that index than we assign index i with INT_MAX in our dp table so as to disregard it in future calculations.
+        
         if(i>=nums.size()-1){
             return 0;
         }
@@ -18,8 +22,7 @@ public:
         
         return dp[i]=mini;
     }
-    
-    
+
     
     int jump(vector<int>& nums) {
         int n=nums.size();
