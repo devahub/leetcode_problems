@@ -1,6 +1,9 @@
 class Solution
 {
     public:
+    
+        // iterative solution---->
+    
        	//         ListNode* deleteDuplicates(ListNode *head)
        	//         {
 
@@ -26,9 +29,10 @@ class Solution
         ListNode* deleteDuplicates(ListNode *head)
         {
             ListNode *curr = head;
+            
             if (curr != NULL && curr->next != NULL)
             {
-                if (curr->val == curr->next->val)
+                if (curr->val==curr->next->val)
                 {
                     curr->next = curr->next->next;
                 }
