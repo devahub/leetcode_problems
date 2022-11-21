@@ -1,5 +1,6 @@
 class Solution {
 public:
+    // use simple bfs--->we will use bfs because at one point of time he can move simultaneously anywhere 
     
     int m,n;
     int dx[4] = {0,0,1,-1};
@@ -12,7 +13,6 @@ public:
     bool valid(int r,int c){
         return (r>=0 && c>=0 && r<m && c<n);
     }
-    
     
     
     int nearestExit(vector<vector<char>>& maze, vector<int>& entrance) {
@@ -39,6 +39,7 @@ public:
                 if(maze[x][y]!='+' && isborder(x,y)){
                     return ans;
                 }
+                
                 for(int j=0;j<4;j++){
                     int r=x+dx[j];
                     int c=y+dy[j];
@@ -56,3 +57,9 @@ public:
         
     }
 };
+    
+    
+    
+    
+    
+ 
