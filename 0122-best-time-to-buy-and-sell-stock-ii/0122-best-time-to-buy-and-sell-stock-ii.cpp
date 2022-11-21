@@ -1,5 +1,8 @@
 class Solution {
 public:
+    
+    // using recurssion--->
+    
 //     int solve(vector<int>& prices,int i,int buy){
 //             if(i==prices.size()){
 //                 return 0;
@@ -27,14 +30,16 @@ public:
     /// dp --->changing parameters are index and buy
     
         int solve(vector<int>& prices,int i,int buy,vector<vector<int>>&dp){
-            int pro1=INT_MIN,pro2=INT_MIN;
+            int pro1=INT_MIN;
+            int pro2=INT_MIN;
             if(i==prices.size()){
                 return 0;
             }
             if(dp[i][buy]!=-1){
                 return dp[i][buy];
             }
-        if(buy){
+            
+        if(buy==1){
             int buy=-prices[i]+solve(prices,i+1,0,dp);
             int nbuy=solve(prices,i+1,1,dp);
              pro1=max(buy,nbuy);
