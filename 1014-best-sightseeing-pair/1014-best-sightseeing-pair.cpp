@@ -17,17 +17,18 @@ public:
 //     }
 // };
     
-    
+    //  dp---->
     
     int maxScoreSightseeingPair(vector<int>& values) {
-        int ans = 0;
+        int maxi = 0;
         int bestscore = 0;
         
         for(int i = 1; i < values.size(); i++) {
-            bestscore = max(bestscore, values[i-1]+i-1);
-            ans = max(ans, bestscore+values[i]-i);
+            bestscore = max(bestscore, values[i-1]+i-1);            // j==i-1
+            maxi = max(maxi, bestscore+values[i]-i);
         }
         
-        return ans;
+        
+        return maxi;
     }
 };
