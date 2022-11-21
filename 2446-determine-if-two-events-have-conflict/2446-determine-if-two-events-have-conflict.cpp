@@ -1,5 +1,10 @@
 class Solution {
 public:
+    
+    
+    // brute force----->
+    
+    
 //     bool haveConflict(vector<string>& event1, vector<string>& event2) {
 //         int  h11=stoi(event1[0].substr(0,2));
 //         int  m11=stoi(event1[0].substr(3,5));
@@ -30,11 +35,8 @@ public:
 //     }
 // };
     
-    
-    
-    
-        bool haveConflict(vector<string>& event1, vector<string>& event2) {
 
+        bool haveConflict(vector<string>& event1, vector<string>& event2) {
             if(event2[0]<=event1[1] && event2[1]>=event1[0]){
                 return true;
             }
