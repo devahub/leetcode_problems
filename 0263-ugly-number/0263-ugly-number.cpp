@@ -2,11 +2,14 @@ class Solution
 {
     public:
 
-       	//recurssively
+       	// using recurssively
+    
 //         bool isUgly(int n)
 //         {
-//             if (n == 0) return false;
-//             if (n == 1) return true;
+//             if (n == 0) 
+//                   return false;
+//             if (n == 1)
+//                    return true;
 
 //             if (n % 2 == 0)
 //                 return isUgly(n / 2);
@@ -19,10 +22,15 @@ class Solution
 //                 return false;
 //         }
 // };
+    
+    
+    /// usinng while loop----->
 
 bool isUgly(int n) 
     {
-        if (n <= 0) return false;
+        if (n <= 0) 
+            return false;
+    
         while(n > 1)
         {
             if (n % 2 == 0) n = n / 2;
