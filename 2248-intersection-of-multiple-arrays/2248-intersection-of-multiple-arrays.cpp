@@ -1,5 +1,8 @@
 class Solution {
 public:
+    
+// using map------>    
+    
 //     vector<int> intersection(vector<vector<int>>& nums) {
 //         map<int,int>mp;
 //         int n=nums.size();
