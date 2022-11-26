@@ -27,6 +27,7 @@ class Solution
         int n = mat[0].size();
 
         vector<vector < int>> dp(m + 1, vector<int> (n + 1, -1));
+        
         for (int j = 0; j < n; j++)
         {
             c = min(c, solve(mat, m - 1, j, m, n, dp));
