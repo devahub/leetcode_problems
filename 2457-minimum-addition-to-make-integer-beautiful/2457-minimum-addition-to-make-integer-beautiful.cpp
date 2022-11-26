@@ -15,11 +15,11 @@ public:
        if(digsum(n)<=target)
            return 0;
         
-       long long count=10;
+        long long count=10;
         long long temp=n;
         
         while(digsum(temp)> target){
-            long long mod=n%count;
+             long long mod=n%count;
              temp=n+count-mod;
             
             count*=10;
