@@ -83,9 +83,7 @@ public:
     
     vector<vector<int>>ans;
     void solve(vector<int>& nums,vector<int>& v,int index){
-        
-       
-            ans.push_back(v);
+        ans.push_back(v);
         
         for(int i=index;i<nums.size();i++){
             v.push_back(nums[i]);
