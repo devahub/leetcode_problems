@@ -42,7 +42,7 @@ public:
         if(buy==1){
             int buy=-prices[i]+solve(prices,i+1,0,dp);
             int nbuy=solve(prices,i+1,1,dp);
-             pro1=max(buy,nbuy);
+            pro1=max(buy,nbuy);
         }
         else{
             
@@ -56,7 +56,7 @@ public:
 
     int maxProfit(vector<int>& prices) {
         int n=prices.size();
-        vector<vector<int>>dp(n,vector<int>(2,-1));
+        vector<vector<int>>dp(n,vector<int>(2,-1));     // dp of current price and buy
         return solve(prices,0,1,dp);
     }
 };
