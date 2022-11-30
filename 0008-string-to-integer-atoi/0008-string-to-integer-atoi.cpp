@@ -31,7 +31,7 @@ public:
             i++;
         }
         
-        if(!flag)
+        if(flag==false)
             res*=-1;
             
 		if(res<=INT_MIN)
