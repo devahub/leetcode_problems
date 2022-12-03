@@ -19,7 +19,6 @@ int findCircleNum(vector<vector < int>> &mat)
 {
 
     int n = mat.size();
-
     int c = 0;
 
     vector<bool> vis(n, false);
@@ -28,8 +27,9 @@ int findCircleNum(vector<vector < int>> &mat)
     {
         if (!vis[i])
         {
-            c++;
             dfs(mat, i, vis);
+            c++;
+            
         }
     }
     return c;
