@@ -2,7 +2,7 @@ class Solution
 {
     public:
        	// dry run on pen n paper
-
+        // observation---->
        	    vector<int> findSmallestSetOfVertices(int n, vector<vector<int>>& edges) {
        	        vector < int>vis(n,0);
        	        vector < int>v;
@@ -19,6 +19,9 @@ class Solution
        	        return v;
        	    }
        	};
+
+
+            // same approach using map----->
 
 //         vector<int> findSmallestSetOfVertices(int n, vector<vector < int>> &edges)
 //         {
