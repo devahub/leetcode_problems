@@ -1,9 +1,10 @@
 class Solution {
 public:
     
-    // using two pointer----->
+    // using two pointer-----> 
     
 //     bool isSubsequence(string s, string t) {
+    
 //         int j=0;
 //         for(int i=0;i<t.size() && j<s.size();i++){
 //             if(s[j]==t[i]){
@@ -29,13 +30,11 @@ public:
             return dp[m][n] = 1 + solve(s,t,m-1,n-1,dp);
         else
             return dp[m][n] = solve(s,t,m,n-1,dp);
-        
-        
-        
     }
     
     
-     bool isSubsequence(string s, string t){
+     
+    bool isSubsequence(string s, string t){
          int m=s.size();
          int n=t.size();
          
@@ -43,7 +42,7 @@ public:
             return false;
          vector<vector<int>> dp(m+1,vector<int> (n+1,-1));
          
-         if(solve(s,t,m,n,dp)==m){
+         if(solve(s,t,m,n,dp)==s.size()){
              return true;
          }
          return false;
