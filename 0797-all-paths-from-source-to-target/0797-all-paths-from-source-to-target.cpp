@@ -10,8 +10,6 @@ public:
         for(int j=0;j<graph[i].size();j++){
             dfs(graph,vis,ans,graph[i][j]);
         }
-        
-        
         vis.pop_back();
     }
     
