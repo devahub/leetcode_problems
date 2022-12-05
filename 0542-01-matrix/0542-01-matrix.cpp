@@ -1,8 +1,11 @@
 class Solution
 {
     public:
-       	//  vector<vector < int>> updateMatrix(vector<vector<int>>& mat) {
+    
+    
        	// brute force---->TLE
+       	
+    //  vector<vector < int>> updateMatrix(vector<vector<int>>& mat) {
 
        	//         int m=mat.size();
        	//         int n=mat[0].size();
@@ -30,7 +33,10 @@ class Solution
        	//  }
        	// };
 
-       	// optimal approach-----graph   bfs || visited array || queue of bfs
+    
+    
+    
+// optimal approach--> bfs because we have to move simultaneously || visited array || queue of bfs
 
         public:
 
@@ -43,6 +49,7 @@ class Solution
             return true;
         }
 
+    
     vector<vector < int>> updateMatrix(vector<vector < int>> &mat)
     {
         int m = mat.size();
@@ -58,15 +65,18 @@ class Solution
             {
                 if (mat[i][j] == 0)
                 {
-                    vis[i][j] = true;
                     q.push({{i,j},0 });
+                    vis[i][j] = true;
                 }
+                
                 else
                 {
                     mat[i][j] = 0;
                 }
             }
         }
+        
+        
         while (!q.empty())
         {
 
