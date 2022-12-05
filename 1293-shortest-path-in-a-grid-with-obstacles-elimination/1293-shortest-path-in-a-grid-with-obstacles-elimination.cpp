@@ -7,7 +7,8 @@ public:
         q.push({0,0,0,k});
         while(!q.empty()){
             auto t=q.front();
-            int x=t[0],y=t[1];
+            int x=t[0];
+            int y=t[1];
             q.pop();
 			
 			// Exit if current position is outside of the grid
@@ -15,10 +16,13 @@ public:
                 continue;
             }
 			
-			// Destination found
+			// Destination found    // if reached destination, return current length of path
             if(x==grid.size()-1 && y==grid[0].size()-1)
                 return t[2];
 
+            
+            // If we hit an obstacle & we don't have any Ks remaining, continue
+            // If we still have Ks to spend, we spend 1.
             if(grid[x][y]==1){
                 if(t[3]>0)
                     t[3]--;
