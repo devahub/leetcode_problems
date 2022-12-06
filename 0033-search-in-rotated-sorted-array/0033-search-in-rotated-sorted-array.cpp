@@ -19,14 +19,14 @@ class Solution
                 {
                     return mid;
                 }
-                else if (nums[mid] >= nums[l])
+                else if (nums[mid] >= nums[l])      // left array is sorted
                 {
                     if (nums[l] <= target && target < nums[mid])
                         h = mid - 1;
                     else
                         l = mid + 1;
                 }
-                else
+                else                                // right array is sorted
                 {
                     if (nums[mid] < target && target <= nums[h])
                         l = mid + 1;
