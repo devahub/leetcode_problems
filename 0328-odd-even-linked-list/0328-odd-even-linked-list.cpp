@@ -44,13 +44,13 @@ public:
           ListNode* even_start=head->next;
           
           while(odd->next!=NULL && even->next!=NULL){
-             odd->next=even->next;
+              odd->next=even->next;
               even->next=odd->next->next;
+              
               even=even->next;
               odd=odd->next;
-              
-             
-         }
+        }
+          
           odd->next=even_start;
           return head;
           
