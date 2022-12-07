@@ -1,7 +1,11 @@
 class Solution {
 public:
     
-    vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success)       {
+    // using binary search----->
+   
+    
+vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success)       {
+        
         vector<int> v(spells.size(),0);
         sort(potions.begin(),potions.end());
         
@@ -9,11 +13,11 @@ public:
         {   
             int l=0;
             int h=potions.size()-1;
-            int mid;
+            
             while(l<=h)
             {
-                mid = l + (h-l)/2;
-                
+               int mid = l + (h-l)/2;
+                //if(spells[i]*potions[mid] >= success)
                 if((long long int)spells[i]*(long long int)potions[mid] >= success)
                     h = mid-1;
                 
@@ -24,11 +28,6 @@ public:
             
             v[i] = potions.size()-1-h;
         }
-        
-        return v;
-        
-        
-        
-        
+        return v;   
     }
 };
