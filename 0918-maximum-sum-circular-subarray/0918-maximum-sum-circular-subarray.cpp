@@ -24,13 +24,18 @@ class Solution
        	//     }
        	// };
 
+    
+    
+    
+    
+    
+    
+    
        	// using dp----->
        	//   we can have two cases----> circular cases or  continuous cases(can be found using kadanes)
-       	// so we have to focus on getting circular cases
+       	// so we have to mainly focus on getting circular cases
 
        
-    
-    
        int kadane(vector<int>& nums) {
            
         int maxi = INT_MIN;
@@ -50,17 +55,20 @@ class Solution
             {
                 return 0;
             }
+        
             int x = kadane(nums);	// for normal continous max sum
 
             int y = 0;
             for (int i = 0; i < nums.size(); i++)
             {
                 y += nums[i];
-                nums[i] *= -1;
+                nums[i] *= -1;       // reverse the signs and apply kadane & store in z
             }
-
+        // max subarray sum= total sum of array-sum of non-contributing elements
             int z = kadane(nums);
-            if (y + z == 0) return x;
+        
+            if (y + z == 0) 
+                return x;
 
             return max(x, y + z);
         }
