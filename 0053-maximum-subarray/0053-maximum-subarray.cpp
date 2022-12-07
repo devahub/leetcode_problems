@@ -19,6 +19,7 @@ class Solution
         // kadane's algorithm----------->
 
        int maxSubArray(vector<int>& nums) {
+           
         int maxi = INT_MIN;
         int sum = 0;
         for(int i = 0; i < nums.size(); i++) {
