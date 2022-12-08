@@ -2,7 +2,7 @@ class Solution
 {
     public:
    
-    // brute force-->  tle
+    // brute force--> giving Tle
     
 //     int maxProduct(vector<int>& nums) {
 //         int ans = nums[0];
@@ -29,6 +29,7 @@ class Solution
        	// traverse from start 
        	// traverse from end
         // There are 2 possibilities - either the count of -ve numbers is even or odd.... --->>>
+//     To understand this, lets take test case as [3,-1,4]. When we traverse from left to right, we will get ans as 3 whereas when we traverse from right to left, we will get ans as 4 which is the required ans
     
     
     
@@ -58,6 +59,9 @@ class Solution
 };
 
 
+
+
+//  swapping aaproach-------->
 
 
 // int maxProduct(vector<int>& nums) {
