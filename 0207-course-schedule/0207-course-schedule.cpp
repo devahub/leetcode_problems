@@ -19,7 +19,7 @@ public:
             }
         }
         
-        vis[id] = 2;
+        vis[id] = 2;            // mark it as visited
         return false;   
     }
     
@@ -38,5 +38,3 @@ public:
         return true;
     }
 };
-
-
