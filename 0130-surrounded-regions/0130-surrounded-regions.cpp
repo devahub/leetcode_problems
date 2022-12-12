@@ -58,7 +58,9 @@ public:
             return;
         if(board[i][j]!='O')
             return;
+        
         board[i][j]='1';
+        
         dfs(board,i+1,j);
         dfs(board,i,j+1);
         dfs(board,i-1,j);
