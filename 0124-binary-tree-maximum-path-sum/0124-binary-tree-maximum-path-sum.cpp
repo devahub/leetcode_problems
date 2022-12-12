@@ -2,6 +2,8 @@
 class Solution {
 public:
     
+    // root->val + lefetmax + rightmax
+    
     int maxi = INT_MIN;
 public:
     int maxPathSum(TreeNode* root) {
@@ -10,7 +12,8 @@ public:
     }
     
     int depth(TreeNode* root){
-        if(root == NULL) return 0;
+        if(root == NULL) 
+            return 0;
         
         int lh = max(0,depth(root->left));
         int rh = max(0,depth(root->right));
