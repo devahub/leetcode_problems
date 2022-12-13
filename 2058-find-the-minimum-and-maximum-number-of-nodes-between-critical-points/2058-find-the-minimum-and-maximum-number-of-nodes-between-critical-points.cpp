@@ -2,14 +2,15 @@ class Solution
 {
     public:
 
-       	// pushing the index of all critical points in a vector
+       	//   using vector------>pushing the index of all critical points in a vector
 
-       	//     vector<int> nodesBetweenCriticalPoints(ListNode* head) {
-       	//         ListNode *prev =head;
-       	//         vector < int>v;
+//     vector<int> nodesBetweenCriticalPoints(ListNode* head) {
+  
+    //         ListNode *prev =head;
+       	//         vector<int>v;
        	//         int i=1;
        	//         while(head->next!=NULL){
-       	//             if((prev->val < head->val and head->val > head->next->val) ||(                     prev->val > head->val and head->val < head->next->val)){
+//  if((prev->val < head->val and head->val > head->next->val) ||(prev->val > head->val and head->val < head->next->val)){
        	//                 v.push_back(i);
        	//             }
        	//             prev=head;
@@ -31,6 +32,11 @@ class Solution
        	//     }
        	// };
 
+    
+    
+    
+    // not using vector-------> linkedlist only------->
+    
         vector<int> nodesBetweenCriticalPoints(ListNode *head)
         {
             ListNode *prev = head;
@@ -42,7 +48,7 @@ class Solution
             
             while (head->next!=NULL)
             {
-                if ((prev->val < head->val and head->val > head->next->val) || (prev->val > head->val and head->val < head->next->val))
+if ((prev->val < head->val and head->val > head->next->val) || (prev->val > head->val and head->val < head->next->val))
                 {
                     
                  // consider case critical points be 3,4,5,6 then also {1,3}   
@@ -56,6 +62,7 @@ class Solution
                 head = head->next;
                 i++;
             }
+            
             if (mindist == INT_MAX)
                 return { -1,-1 };
             
