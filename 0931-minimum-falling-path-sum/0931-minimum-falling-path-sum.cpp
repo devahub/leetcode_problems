@@ -2,7 +2,7 @@ class Solution
 {
     public:
 
-        int solve(vector<vector < int>> &mat, int i, int j, int m, int n, vector< vector< int>> &dp)
+int solve(vector<vector < int>> &mat, int i, int j, int m, int n, vector< vector< int>> &dp)
         {
             if (j < 0 || j > n - 1)
                 return 100000000;
