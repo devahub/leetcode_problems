@@ -44,7 +44,7 @@ public:
     
     
     
-    // using topological sort----->bfs
+    // using topological sort----->bfs  kahn algorithm----->
     
      bool canFinish(int n, vector<vector<int>>& pre) {
          if(pre.size()==0) 
@@ -87,7 +87,7 @@ public:
              }
          }
          
-         if(c==n){
+         if(c==n){              // means no cycle--->
              return true;
          }
          return false;
