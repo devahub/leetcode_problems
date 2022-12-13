@@ -29,27 +29,7 @@ public:
     
     
     
- //   approach--3>
-   
-//     vector<vector<int>>ans;
-//     void helper(int index, vector<int>&current,vector<int>&nums)
-//     {
-//         ans.push_back(current); 
-        
-//         for(int i=index;i<nums.size();i++)
-//         {
-//             current.push_back(nums[i]); 
-//             helper(i+1,current,nums); 
-//             current.pop_back(); 
-//         }
-//         return;
-//     }
-//     vector<vector<int>> subsets(vector<int>& nums) {
-//         vector<int>current;
-//         helper(0,current,nums);
-//         return ans; 
-//     }
-// };
+    
     
     
     
@@ -79,23 +59,29 @@ public:
 
 
     
-    // recurssive solution----->
     
-    vector<vector<int>>ans;
-    void solve(vector<int>& nums,vector<int>& v,int index){
+    
+    
+    
+    
+    // recurssive solution-----> backtracking solution---->
+    
+    
+    void solve(vector<int>& nums,vector<vector<int>>&ans,vector<int>& v,int index){
         ans.push_back(v);
         
         for(int i=index;i<nums.size();i++){
             v.push_back(nums[i]);
-            solve(nums,v,i+1);
+            solve(nums,ans,v,i+1);
             v.pop_back();
         }
         
     }
     
   vector<vector<int>> subsets(vector<int>& nums){
+      vector<vector<int>>ans;
       vector<int>v;
-      solve(nums,v,0);
+      solve(nums,ans,v,0);
       return ans; 
   }
 };
