@@ -19,6 +19,8 @@ class Solution
        	//         {                        
        	//             reverse(v.begin(),v.end());
        	//         }
+    
+    
        	//        	// important lines---------------->>>>>>>>
        	//         else{
        	//             int size=v.size();
@@ -46,16 +48,22 @@ class Solution
        	//     }
        	// };
 
-       	// 
+    
+    
+    
+       	// using dummy variable------>
 
         ListNode* reverseKGroup(ListNode *head, int k)
         {
-            if (head == NULL) return head;
+            if (head == NULL) 
+                return head;
 
             ListNode *dummy = new ListNode(0);
             dummy->next = head;
 
-            ListNode *cur = dummy, *nex = dummy, *pre = dummy;
+            ListNode *cur = dummy;
+            ListNode *nex = dummy;
+            ListNode *pre = dummy;
             int l = 0;
 
             while (cur->next != NULL)
