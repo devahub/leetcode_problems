@@ -2,6 +2,7 @@ class Solution
 {
     public:
 
+    
         ListNode* reverse(ListNode *head)
         {
             if (!head)
@@ -19,6 +20,10 @@ class Solution
             return prev;
         }
 
+    
+    
+    
+    
     ListNode* reverseEvenLengthGroups(ListNode *head) {
         ListNode* dummy = new ListNode();
         dummy -> next = head;
@@ -38,7 +43,7 @@ class Solution
             nexthead=tail->next;
             
             
-            if(j%2==0){
+            if(j%2==0){                    // if group is even----> 
                 tail->next=NULL;
                 prev->next=reverse(head);
                 prev=head;
