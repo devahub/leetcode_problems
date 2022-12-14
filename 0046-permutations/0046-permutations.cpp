@@ -19,7 +19,7 @@ class Solution
 
         void solve(vector<int> &nums, int index, vector<vector< int>> &ans)
         {
-            if (index == nums.size())
+            if (index == nums.size())                       //base case
             {
                 ans.push_back(nums);
                 return;
