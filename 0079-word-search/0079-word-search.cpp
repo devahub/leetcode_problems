@@ -5,7 +5,8 @@ public:
 
     bool dfs(vector<vector<char>>& board, string word,int x,int y,int idx){
      
-        if(idx==word.size())return true;            // base condition
+        if(idx==word.size())
+            return true;            // base condition
         
          if (x < 0 || x >= board.size() || y < 0 || y >= board[0].size() || 
             board[x][y] == '2' || board[x][y] != word[idx]) 
@@ -24,6 +25,8 @@ public:
         return res;
         
     }
+    
+    
     
     bool exist(vector<vector<char>>& board, string word) {
       
