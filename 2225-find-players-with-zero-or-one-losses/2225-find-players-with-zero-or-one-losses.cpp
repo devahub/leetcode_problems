@@ -1,5 +1,7 @@
 class Solution {
 public:
+    
+    
 //     vector<vector<int>> findWinners(vector<vector<int>>& matches) {
 //         vector<vector<int>>ans(2);
 //         unordered_map<int,int>mp;
@@ -32,11 +34,17 @@ public:
 // };
     
     
+    
+    
+    
+    
+    
+    
+    
     // more clean code
     
      vector<vector<int>> findWinners(vector<vector<int>>& matches) {
         int n=matches.size();
-        
         vector<vector<int>> ans;
         map<int,int> m1,m2;
         
