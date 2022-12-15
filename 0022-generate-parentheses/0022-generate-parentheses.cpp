@@ -21,7 +21,8 @@ public:
     
     vector<string> generateParenthesis(int n) {
         vector<string>v;
-        solve(n,0,0,"",v);
+        string cur="";
+        solve(n,0,0,cur,v);
         return v;
     }
 };
