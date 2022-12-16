@@ -1,5 +1,8 @@
 class Solution {
 public:
+    
+    
+    
     bool pal(string s){
         string p=s;
         reverse(s.begin(),s.end());
@@ -8,11 +11,10 @@ public:
     
     
     bool isStrictlyPalindromic(int n) {
-        
         for(int i=2;i<=n-2;i++){
             string s="";
             int k;
-            while(n!=1){
+            while(n!=1){            // converting number to base form 
                 k=k+n%i;
                 n=n/i;
                 s+=to_string(k);
