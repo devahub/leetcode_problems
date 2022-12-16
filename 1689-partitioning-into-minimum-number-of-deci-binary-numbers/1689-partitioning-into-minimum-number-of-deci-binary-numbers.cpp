@@ -1,6 +1,10 @@
 class Solution {
 public:
 
+    
+    // observation based--------->
+    
+    
 // Eg. 
 // 1. Consider n="9"
 // => We need to add 1 for 9 times to get n
