@@ -4,31 +4,30 @@ class Solution
 
        	// greedy solution--------->
 
-       bool canJump(vector<int>& nums) {
-            if(nums.size()==1)
-                return true;
-            
-           
-        int n=nums.size()-1;
-        int reach=0;
-           
-        for(int i=0;i<nums.size();i++)
+        bool canJump(vector<int> &nums)
         {
-            reach=max(reach,i+nums[i]);
-            if(reach==i)
-                return false;
-            else
+            if (nums.size() == 1)
+                return true;
+
+            int n = nums.size() - 1;
+            int reach = 0;
+
+            for (int i = 0; i < nums.size(); i++)
             {
-                if(reach>=n)
+                reach = max(reach, i + nums[i]);
+                if (reach == i)
+                    return false;
+                else
                 {
-                    return true;
+                    if (reach >= n)
+                    {
+                        return true;
+                    }
                 }
             }
+            return true;
         }
-        return true;
-        
-       	    }
-       	};
+};
 
 //         bool solve(int i, vector<int> &nums, int cur)
 //         {
