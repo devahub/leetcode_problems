@@ -2,6 +2,8 @@ class Solution
 {
     public:
     
+    
+    
     // brute force-----> create a vector and push sum into it
     
 //         ListNode* mergeNodes(ListNode *head)
@@ -47,7 +49,8 @@ class Solution
     
     ListNode* mergeNodes(ListNode *head){
         
-        if(head->val==0)head=head->next;
+        if(head->val==0)
+            head=head->next;
         
         ListNode *res=head;
         ListNode *cur=head;
