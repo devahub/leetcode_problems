@@ -4,13 +4,16 @@ public:
         vector<int>v;
         
         for(auto i:nums){
-            if(i<pivot)v.push_back(i);
+            if(i<pivot)
+                v.push_back(i);
         }
         for(auto i:nums){
-            if(i==pivot)v.push_back(i);
+            if(i==pivot)
+                v.push_back(i);
         }
         for(auto i:nums){
-            if(i>pivot)v.push_back(i);
+            if(i>pivot)
+                v.push_back(i);
         }
         return v;
     }
