@@ -22,8 +22,9 @@ public:
     
     
     
-        // using left and right vector
-        // taking first testcase---->
+    // using left and right vector     ----> prefix and postfix vector technique
+    
+    // taking first testcase---->
     //  original   ---->[1,1,0]
     //  left vector---->[0,1,3]
     //  right vector--->[1,0,0]
