@@ -29,6 +29,10 @@ public:
     
     
     
+    
+    
+    
+    
     // using previous diff pointers
     
      int numberOfArithmeticSlices(vector<int>& nums){
@@ -36,21 +40,22 @@ public:
             return 0;
          
          int c=0;
+         int flag=0;
          int diff=0;
-         int ind=0;
          int prev_diff = nums[1] - nums[0];
+         
          
          for(int i=1;i<nums.size()-1;i++){
              int diff = nums[i+1] - nums[i];
              
              if(diff ==  prev_diff)
-                ind++;
+                flag++;
              
              else{
                  prev_diff=diff;
-                 ind=0;
+                 flag=0;
              }
-             c+=ind;
+             c+=flag;
          }
          return c; 
      }
