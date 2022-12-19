@@ -4,9 +4,14 @@ public:
     unordered_map<string, int> map;
     int dp[305][305];
     
+    
     bool solve(string &s, int n, int start){
-        if(start==n) return true;
-        if(dp[start][n]!=-1) return dp[start][n];
+        
+        if(start==n) 
+            return true;
+        
+        if(dp[start][n]!=-1) 
+            return dp[start][n];
         
         for(int i=start;i<n;i++){
             string str = s.substr(start,i-start+1);
@@ -21,13 +26,15 @@ public:
     
     
     
+    
     bool wordBreak(string s, vector<string>& wordDict) {
         memset(dp,-1,sizeof(dp));
-            
+        int n=s.size();
+        
         for(auto i:wordDict){
             map[i]++;    
         }
-        int n=s.size();
+       
         
         return solve(s,n,0);
         
