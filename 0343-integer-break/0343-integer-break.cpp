@@ -8,6 +8,8 @@ public:
         if(dp[i][sum]!=-1){
             return dp[i][sum];
         }
+        
+        
         int npick=solve(i-1,sum,dp);
         int pick=0;
         
