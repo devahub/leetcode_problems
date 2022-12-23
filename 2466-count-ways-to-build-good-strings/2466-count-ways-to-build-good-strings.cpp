@@ -2,10 +2,12 @@ class Solution
 {
     public:
 
+    
        	//brute force->>using recurssion-TLE 
 
        	//     int mod=1e9+7;
-       	//     int solve(int size,int zero,int one,int n){
+       	
+        //     int solve(int size,int zero,int one,int n){
        	//         if(size==n){
        	//             return 1;
        	//         }
@@ -29,6 +31,10 @@ class Solution
        	//     }
        	// };
 
+    
+    
+    
+    
        	// using dp--->
 
     int mod = 1e9 + 7;
@@ -51,7 +57,6 @@ class Solution
     int countGoodStrings(int low, int high, int zero, int one)
     {
         vector<int> dp(high + 1, -1);
-
         int ans = 0;
 
         for (int i = low; i <= high; i++)
