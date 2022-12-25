@@ -5,13 +5,15 @@ public:
     
     string frequencySort(string s) {
         
-        unordered_map<char,int> freq;          
+        unordered_map<char,int>mp;          
         priority_queue<pair<int,char>>pq; 
         
-        for(char c: s)
-            freq[c]++;
-        for(auto it: freq)
-            pq.push({it.second,it.first});
+        for(auto i: s)
+            mp[i]++;
+        
+        
+        for(auto i: mp)
+            pq.push({i.second,i.first});
         
         
         s="";   
