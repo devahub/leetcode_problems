@@ -10,16 +10,17 @@ class Solution
                 return true;
 
             int n = nums.size() - 1;
-            int reach = 0;
+            int r = 0;
 
-            for (int i = 0; i < nums.size(); i++)
+            for (int i = 0; i < n+1; i++)
             {
-                reach = max(reach, i + nums[i]);
-                if (reach == i)
+                r = max(r, i + nums[i]);
+                
+                if (r == i)
                     return false;
                 else
                 {
-                    if (reach >= n)
+                    if (r >= n)
                     {
                         return true;
                     }
