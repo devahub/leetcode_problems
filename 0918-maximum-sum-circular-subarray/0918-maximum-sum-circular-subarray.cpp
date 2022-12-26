@@ -2,10 +2,11 @@ class Solution
 {
     public:
 
-       	// brute force---->
+       	// brute force---->using modulo
 
        	//     int maxSubarraySumCircular(vector<int>& nums) {
-       	//         int res=nums[0];   
+       	
+        //         int res=nums[0];   
        	//         for(int i=0;i < nums.size();i++) 
        	//         {
        	//             int curr_sum=nums[i];     
@@ -48,7 +49,8 @@ class Solution
         return maxi;
     }
     
-    
+    // The negative of this answer will give us most minimum subarray sum of middle elements. Subtracting this value from totalSum will give us circular max subarray sum
+
     int maxSubarraySumCircular(vector<int> &nums)
         {
             if (nums.size() == 0)
@@ -61,7 +63,7 @@ class Solution
             int y = 0;
             for (int i = 0; i < nums.size(); i++)
             {
-                y += nums[i];
+                y += nums[i];        // total sum
                 nums[i] *= -1;       // reverse the signs and apply kadane & store in z
             }
         // max subarray sum= total sum of array-sum of non-contributing elements
