@@ -1,13 +1,13 @@
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
-        
         vector<int>v;
         
-        int t=0,l=0,b=matrix.size()-1;
+        int t=0;
+        int l=0;
+        int b=matrix.size()-1;
         int r=matrix[0].size()-1;
         int dir=0;
-        
         
         
         while(t<=b && l<=r){
@@ -33,8 +33,10 @@ public:
                     v.push_back(matrix[i][l]);
             l++;
             }
-        dir=(dir+1)%4;                                              // for cyclic process
+        dir=(dir+1)%4;                  // for cyclic process
         }
+        
+        
         return v;
         
     }
