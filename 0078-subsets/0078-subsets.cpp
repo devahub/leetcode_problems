@@ -46,7 +46,7 @@ public:
 //               int size=ans.size();
               
 //               for(int j=0;j<size;j++){
-//                   vector<int>temp=ans[j];
+//                   vector<int>temp=ans[j];      // get the size
 //                   temp.push_back(nums[i]);
 //                   ans.push_back(temp);
                   
