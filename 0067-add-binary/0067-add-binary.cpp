@@ -1,5 +1,10 @@
 class Solution {
 public:
+    
+    // sum and carry waala logic------>
+    // for sum--->sum%2
+    //for carry-->sum/2
+    
     string addBinary(string a, string b) {
         int i=a.size()-1;
         int j=b.size()-1;
@@ -21,7 +26,7 @@ public:
         if(carry!=0)
             res+='1';
         reverse(res.begin(),res.end());
+       
         return res;
-        
     }
 };
