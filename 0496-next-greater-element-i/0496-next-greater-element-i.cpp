@@ -26,6 +26,11 @@ class Solution
        	//     }
        	// };
 
+    
+    
+    
+    
+    
        	// stack approach--->
         vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2)
         {
