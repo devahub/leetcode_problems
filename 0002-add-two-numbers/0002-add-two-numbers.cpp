@@ -1,7 +1,8 @@
 
 class Solution {
 public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+    
+//    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
     
 //         ListNode* dummy=new ListNode();
 //         ListNode* temp=dummy;
@@ -46,7 +47,8 @@ public:
 // };
         
         
-        
+        ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+
         ListNode* dummy=new ListNode();
         ListNode* temp=dummy;
         
@@ -64,7 +66,7 @@ public:
             }
            
             sum+=c;
-            c=sum/10;
+            c=sum/10;               // carry
             sum=sum%10;
             
             ListNode *cur = new ListNode(sum);
