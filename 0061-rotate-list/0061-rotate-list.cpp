@@ -62,34 +62,64 @@ class Solution
    	//   l=5             5-2=3            ans===>   4->5->1->2->3
 
     public:
-        ListNode* rotateRight(ListNode *head, int k)
-        {
+//         ListNode* rotateRight(ListNode *head, int k)
+//         {
 
-            if (head == NULL || head->next == NULL)
-            {
-                return head;
-            }
+//             if (head == NULL || head->next == NULL)
+//             {
+//                 return head;
+//             }
 
-            ListNode *cur = head;
-            int l = 1;
-            while (cur->next != NULL)
-            {
-                l++;
-                cur = cur->next;
-            }
+//             ListNode *cur = head;
+//             int l = 1;
+//             while (cur->next != NULL)
+//             {
+//                 l++;
+//                 cur = cur->next;
+//             }
 
-            cur->next = head;       // connecting 5 with 1 making it circular
-            k = k % l;
-            k = l - k;
+//             cur->next = head;       // connecting 5 with 1 making it circular
+//             k = k % l;
+//             k = l - k;
 
-            while (k--)             
-            {
-                cur = cur->next;
-            }
+//             while (k--)             
+//             {
+//                 cur = cur->next;
+//             }
 
-            head = cur->next;
-            cur->next = NULL;           // 3 connected to null
+//             head = cur->next;
+//             cur->next = NULL;           // 3 connected to null
 
+//             return head;
+//         }
+// };
+    
+    
+    
+    
+    // same approach--->as above make it circular
+    
+     ListNode* rotateRight(ListNode* head, int k) {
+        if (head == NULL || head->next == NULL) {
             return head;
         }
+        auto iter = head;
+        auto len = 1;
+         
+        while (iter->next != NULL) {
+            iter = iter->next;
+            ++len;
+        }
+        // close the list (create a ring)
+        iter->next = head;
+        iter = head;
+        // find one element before the new head
+        for (int i = 0; i < len - (k % len) - 1; ++i) {
+            iter = iter->next;
+        }
+        head = iter->next;
+        // open the list (break the ring)
+        iter->next = NULL;
+        return head;
+    }
 };
