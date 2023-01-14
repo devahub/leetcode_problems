@@ -5,13 +5,16 @@ public:
         
         for(auto &i:s)
         {
-            if(i=='{' || i=='[' || i=='(')
-                st.push(i);
-        
+        if(i=='{' || i=='[' || i=='(')
+        {
+            st.push(i);
+        }
         else{
-            if(st.empty() or (st.top()=='{' and i!='}') or (st.top()=='(' and i!=')') or (st.top()=='[' and i!=']'))
+            if(st.empty() or (st.top()=='{' and i!='}') or (st.top()=='(' and i!=')') or (st.top()=='[' and i!=']')){
                 return false;
+        }
             st.pop();
+            
             }
         }
     return st.empty();
