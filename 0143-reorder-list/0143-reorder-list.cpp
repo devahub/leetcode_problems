@@ -83,3 +83,39 @@ public:
         return prev;
     }    
 };
+    
+    
+    
+    
+    
+    // approach---3>>>>>
+    
+//     void reorderList(ListNode* head) {
+//         vector<int>v;
+//         ListNode* temp=head;
+//         int n=0;
+        
+//         while(temp!=NULL){
+//             v.push_back(temp->val);
+//             temp=temp->next;
+//             n++;
+//         }
+//         int heads=0;
+//         int tail=n-1;
+//         int cnts=0;
+//         temp=head;
+//         while(heads<=tail){
+//             if(cnts%2==0){
+//                   temp->data=v[heads];
+//                   heads++;
+//             }
+//             else{
+//                 temp->data=v[tail];
+//                 tail--;
+//             }
+//             cnts++;
+//             temp=temp->next;
+//         }
+//     }
+// };
+    
