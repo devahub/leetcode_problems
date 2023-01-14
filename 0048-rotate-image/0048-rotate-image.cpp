@@ -1,5 +1,8 @@
 class Solution {
 public:
+    
+    /// swap and reverse
+    
     void rotate(vector<vector<int>>& matrix) {
         
         for(int i=0;i<matrix.size();i++){
