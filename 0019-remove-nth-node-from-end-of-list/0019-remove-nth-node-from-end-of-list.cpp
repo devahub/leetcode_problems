@@ -1,10 +1,11 @@
 
 class Solution {
 public:
-    ListNode* removeNthFromEnd(ListNode* head, int n) {
+  
     
     //  first we are calculating length of linked-list and then again traverse till len-n 
       
+//    ListNode* removeNthFromEnd(ListNode* head, int n) {
         
 //         ListNode* temp=head;
 //         int l=0;
@@ -31,6 +32,8 @@ public:
         // approach ---------------------> 2  ---->slow & fast pointer
         // first we move fast n steps and then we move slow and fast simultaneously by 1 step
         
+      ListNode* removeNthFromEnd(ListNode* head, int n) {
+
         ListNode* slow=head;
         ListNode* fast=head;
         
@@ -47,6 +50,10 @@ public:
         slow->next=slow->next->next;
         
         return head;
+        
+        
+        
+        
         
         // approach-----------> 3--- brute force --->vector
         
