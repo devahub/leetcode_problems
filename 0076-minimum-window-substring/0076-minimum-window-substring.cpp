@@ -1,45 +1,45 @@
 class Solution {
 public:
-    string minWindow(string s, string t) {
-        unordered_map<char,int>mp;
-        
-        string ans;
-        int mini=INT_MAX;
-        
-        for(auto i:t){
-            mp[i]++;
-        }
-        int c=mp.size();
-        int i=0;
-        int j=0;
-        int n=s.size();
-        
-        while(j<n){
-            if(mp.find(s[j])!=mp.end()){
-                mp[s[j]]--;
-                if (mp[s[j]] == 0)
+    
+    // aditya verma
+    // using sliding window------>
+    
+   string minWindow(string s, string t) {
+        unordered_map<char, int> mp;
+        for (auto i: t) mp[i]++;
+
+       
+        int ans = INT_MAX;
+        int i = 0, j = 0;
+        int count = mp.size();
+        int start = 0;
+
+        while (j < s.length())
+        {
+            mp[s[j]]--;
+            if (mp[s[j]] == 0) count--;
+           
+            if (count == 0)
+            {
+                while (count == 0)
                 {
-                    c--;
-                }
-            }
-            while(c==0){
-                if(mini>j-i+1){
-                    mini=min(mini,j-i+1);
-                    ans=s.substr(i,j-i+1);
-                    
-                }
-                if (mp.find(s[i]) != mp.end())
-                {
-                    mp[s[i]]++;
-                    if (mp[s[i]] == 1)
+                    if (ans > j - i + 1)
                     {
-                        c++;
+                        ans = j - i + 1; 
+                        start = i;
                     }
+
+                    mp[s[i]]++;
+                    if (mp[s[i]] > 0)
+                        count++;
+                    i++;
                 }
-                i++;
             }
             j++;
         }
-       return ans; 
+        if(ans!= INT_MAX) 
+            return s.substr(start, ans);
+        else
+            return "";
     }
 };
