@@ -4,10 +4,9 @@ public:
     // recurssion + memoization
     
     int solve(string s,vector<int>&dp,int i){
-       
-        if(i==s.size()){
+       if(i==s.size()){
              return 1;
-         } 
+       } 
         
         if(s[i]=='0')
             return 0;
@@ -30,10 +29,7 @@ public:
         return dp[i]=way1+way2;
     }
     
-    
-    
-    
-     int numDecodings(string s){
+      int numDecodings(string s){
          int n=s.size();
          vector<int>dp(n+1,-1);
          int ans=0;
@@ -43,6 +39,13 @@ public:
 };
     
     
+
+
+
+
+
+
+
         // brute soln---->recurssion
     
 //     int solve(string s,int i){
