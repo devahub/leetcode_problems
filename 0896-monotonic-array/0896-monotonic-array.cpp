@@ -28,6 +28,7 @@ public:
 //    bool isMonotonic(vector<int>& nums) {
 //         if (nums.size()<=2) 
 //             return true;
+
 //         bool is_increasing= 1;
 //         if (nums[0] > nums.back())
 //             is_increasing=0;
