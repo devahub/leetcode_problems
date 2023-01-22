@@ -1,5 +1,8 @@
 class Solution {
 public:
+    
+    // use backtracking--------->
+    
     bool pal(string s,int start,int end){
             while(start<=end){
                 if(s[start++]!=s[end--]){
@@ -10,11 +13,13 @@ public:
             return true;
         }
         
+    
     void solve(string s,int index,vector<vector<string>>&ans,vector<string>&v){
-        if(index==s.size()){
+        if(index==s.size()){                //  base case
             ans.push_back(v);
             return;
         }
+        
         for(int i=index;i<s.size();i++){
             if(pal(s,index,i)){
                 v.push_back(s.substr(index,i-index+1));
@@ -24,7 +29,8 @@ public:
         }
         
     }
-      
+   
+    
     vector<vector<string>> partition(string s) {
         int n=s.size();
         vector<vector<string>>ans;
