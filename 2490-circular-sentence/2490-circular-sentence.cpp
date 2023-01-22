@@ -1,6 +1,10 @@
 class Solution
 {
     public:
+    
+    
+    /// approach--->  find the space and check its before and after chars
+    
         bool isCircularSentence(string str)
         {
             for (int i = 0; i < str.size() - 1; i++)
