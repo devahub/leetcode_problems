@@ -28,8 +28,6 @@ public:
             ans+=v[i]+'0';
             i++;
         }
-        
-        
         return ans;
     }        
 };
