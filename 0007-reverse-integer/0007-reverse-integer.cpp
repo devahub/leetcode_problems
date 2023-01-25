@@ -1,9 +1,12 @@
 class Solution {
 public:
+    
+    
+    
+    
+    // 1st approach
+    
     int reverse(int x) {
-        
-        // 1st approach
-        
         long res=0;
         
         while(x!=0){
@@ -13,7 +16,7 @@ public:
             
         }
         
-        if(res>INT_MAX || res<INT_MIN)
+        if(res>INT_MAX || res<INT_MIN)   /// important line
             return 0;
         
     return res;      
