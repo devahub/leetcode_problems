@@ -8,6 +8,7 @@ public:
     string addBinary(string a, string b) {
         int i=a.size()-1;
         int j=b.size()-1;
+        
         int carry=0;
         int sum=0;
         string res;
@@ -25,6 +26,7 @@ public:
         
         if(carry!=0)
             res+='1';
+        
         reverse(res.begin(),res.end());
        
         return res;
@@ -67,6 +69,7 @@ public:
 //         int i = lena-1, j = lenb-1, sum = 0, carry = 0;
 //         string res = "";
         
+
 //         while(i >= 0 || j >= 0)
 //         {
 //             int curA, curB ;
