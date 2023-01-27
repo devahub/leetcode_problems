@@ -34,9 +34,7 @@ public:
             l++;
             }
         dir=(dir+1)%4;                  // for cyclic process
-        }
-        
-        
+        }  
         return v;
         
     }
