@@ -16,6 +16,7 @@ public:
             for(int i=0;i<size;i++){
                 Node* temp=q.front();
                 q.pop();
+                
                 v.push_back(temp->val);
                 for(auto i:temp->children) {    // moving to its children instead of left right
                     q.push(i);
@@ -24,6 +25,7 @@ public:
             res.push_back(v);
         }
         return res;
+        
         }
 };
     
