@@ -1,9 +1,9 @@
-class Solution
-{
-    public:
-        int maxDistance(vector<vector < int>> &grid)
-        {
-            
+class Solution {
+public:
+    
+    
+    int maxDistance(vector<vector<int>>& grid) {
+          
             queue<pair<int, int>> q;
 
             for (int i = 0; i < grid.size(); i++)
@@ -53,10 +53,11 @@ class Solution
                     }
                 }
             }
+        
             if(c>1)
             {
                 return c-1;
             }
             return -1;
-        }
+    }
 };
