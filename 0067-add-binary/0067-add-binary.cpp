@@ -1,6 +1,5 @@
 class Solution {
 public:
-    
     // sum and carry waala logic------>
     // for sum--->sum%2
     //for carry-->sum/2
