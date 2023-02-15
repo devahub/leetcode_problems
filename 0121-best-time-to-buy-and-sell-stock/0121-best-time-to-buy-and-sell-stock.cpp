@@ -1,32 +1,39 @@
 class Solution {
 public:
+    
+    
+    // brute force--->
+    
 //     int maxProfit(vector<int>& prices) {
-//         int maxp=0;
-//         int mini=INT_MAX;
-        
+//         int maxi=0;
 //         for(int i=0;i<prices.size();i++){
-//             mini=min(mini,prices[i]);
-//             maxp=max(maxp,prices[i]-mini);
+//             for(int j=i+1;j<prices.size();j++){
+//                 maxi=max(maxi,prices[j]-prices[i]);
+//             }
 //         }
-//             return maxp;
-            
+//         return maxi;
 //     }
 // };
-       
     
     
     
-    int maxProfit(vector<int>& prices){
-        int maxi=INT_MIN;
-        int mini=INT_MAX;
-        
-        for(int i=0;i<prices.size();i++)
-        {
-            
-            mini=min(mini,prices[i]);
-            maxi=max(maxi,prices[i]-mini);
-        }
-        return maxi;
-        
-    }
+    
+    
+    // optimised approach---->
+    
+    //   [7,1,5,3,6,4] 
+    
+    
+      int maxProfit(vector<int>& prices){
+          int maxi=0;
+          int mini=prices[0];
+          
+          for(int i=1;i<prices.size();i++){
+              mini=min(mini,prices[i]);
+              maxi=max(maxi,prices[i]-mini);
+              
+          }
+                return maxi;
+         
+      }
 };
