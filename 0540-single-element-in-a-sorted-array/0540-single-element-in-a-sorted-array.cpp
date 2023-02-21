@@ -1,7 +1,6 @@
 class Solution {
 public:
-    
-    // using map-->
+     // using map-->
     
 //     int singleNonDuplicate(vector<int>& nums) {
 //         unordered_map<int,int>mp;
@@ -53,5 +52,3 @@ public:
         return -1;    
      }
 };
-    
-    
