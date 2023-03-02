@@ -1,9 +1,7 @@
-class Solution
-{
-    public:
-        int compress(vector<char> &chars)
-        {
-            int n = chars.size();
+class Solution {
+public:
+    int compress(vector<char>& chars) {
+         int n = chars.size();
             int i = 0;
             int j = 0;
 
@@ -33,5 +31,5 @@ class Solution
                 }
             }
             return i;
-        }
+    }
 };
