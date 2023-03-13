@@ -10,8 +10,7 @@
  */
 class Solution {
 public:
-    
-    
+
      ListNode* mergeTwoLists(ListNode *list1, ListNode *list2)
         {
             
@@ -43,6 +42,6 @@ public:
         for(int i=1;i<lists.size();i++){
             head=mergeTwoLists(head,lists[i]);
         }
-        return head;
+        return head;        
     }
 };
