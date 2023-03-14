@@ -46,29 +46,81 @@ public:
     
     
     
-    vector<string> answer;
-    void preorder(TreeNode* root, string str){
-        if(root == NULL){
+//     vector<string> answer;
+//     void preorder(TreeNode* root, string str){
+//         if(root == NULL){
+//             return;
+//         }
+//         if(root -> left == NULL and root -> right == NULL){
+//             str = str+to_string(root -> val);
+//             answer.push_back(str);
+//             return;
+//         }
+//         str = str+to_string(root -> val);
+//         preorder(root -> left,str);
+//         preorder(root -> right,str);
+//     }
+//     int sumNumbers(TreeNode* root) {
+//         string str;
+//         preorder(root,str);
+//         int sum = 0;
+//         for(int i = 0 ; i < answer.size(); i++){
+//             // reverse(answer[i].begin(), answer[i].end());
+//             int x = stoi(answer[i]);
+//             sum+=x;
+//         }
+//         return sum;
+//     }
+// };
+    
+    
+    
+    
+    
+    // 3 approach---->
+    
+    
+      int gans=0;
+    void solve(TreeNode* root,string s)
+     {
+        if(root==NULL)
             return;
-        }
-        if(root -> left == NULL and root -> right == NULL){
-            str = str+to_string(root -> val);
-            answer.push_back(str);
+        
+        
+        //As we reach the leaf node add that leaf node in string and convert the resultant string to int and addd to gans(global answer)
+        
+        if(root->right==NULL&&root->left==NULL)
+        {
+            s+=to_string(root->val);
+                    
+            int temp=stoi(s);
+          gans+=temp;
             return;
-        }
-        str = str+to_string(root -> val);
-        preorder(root -> left,str);
-        preorder(root -> right,str);
+         }
+        
+        //if node is not leaf node just add its value in string and pass it to left and right subtree
+        
+           s+=to_string(root->val);
+           solve(root->left,s);
+            solve(root->right,s);
+        
     }
+    
+    
+    
     int sumNumbers(TreeNode* root) {
-        string str;
-        preorder(root,str);
-        int sum = 0;
-        for(int i = 0 ; i < answer.size(); i++){
-            // reverse(answer[i].begin(), answer[i].end());
-            int x = stoi(answer[i]);
-            sum+=x;
-        }
-        return sum;
+        
+        //Passing empty string to find integer made by each path
+        
+        solve(root,"");
+        
+    
+       
+        //return the global answer
+        
+        return gans;
+        
+        
+        
     }
 };
