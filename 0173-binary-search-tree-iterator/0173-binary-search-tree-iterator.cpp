@@ -13,32 +13,64 @@ class BSTIterator {
 public:
     
     
-    vector<int>v;
-      int c=0;
+//     vector<int>v;
+//       int c=0;
     
-    BSTIterator(TreeNode* root) {
-     inorder(root);   
+//     BSTIterator(TreeNode* root) {
+//      inorder(root);   
+//     }
+    
+//     int next() {
+//         c++;
+//         return v[c-1];
+//     }
+    
+//     bool hasNext() {
+//         return c!=v.size();
+//     }
+//     private:
+    
+//     void inorder(TreeNode* root){
+        
+//        if(root==NULL)return;
+        
+//         inorder(root->left);
+//         v.push_back(root->val);
+//         inorder(root->right);
+        
+//     }
+   
+    
+// };
+
+
+
+
+
+//   appproachh---->2
+
+
+  stack<TreeNode*> s;
+  
+BSTIterator(TreeNode* root) {
+        inorder(root);
+    }
+    
+    void inorder(TreeNode* root){
+        while(root != NULL){
+            s.push(root);
+            root = root->left;
+        }
     }
     
     int next() {
-        c++;
-        return v[c-1];
+        TreeNode* top = s.top();
+        s.pop();
+        inorder(top->right);
+        return top->val;
     }
     
     bool hasNext() {
-        return c!=v.size();
+        return !s.empty();
     }
-    private:
-    
-    void inorder(TreeNode* root){
-        
-       if(root==NULL)return;
-        
-        inorder(root->left);
-        v.push_back(root->val);
-        inorder(root->right);
-        
-    }
-   
-    
 };
