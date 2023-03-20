@@ -19,7 +19,3 @@ public:
         return c>=n;
     }
 };
-    
-    
-    
-    
