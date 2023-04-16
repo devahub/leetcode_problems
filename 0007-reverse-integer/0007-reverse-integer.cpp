@@ -1,10 +1,6 @@
 class Solution {
 public:
-    
-    
-    
-    
-    // 1st approach
+  // 1st approach
     
     int reverse(int x) {
         long res=0;
