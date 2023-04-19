@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int myAtoi(string s) {
+   int myAtoi(string s) {
         int n=s.size();
         bool flag=true;
         int i=0;
@@ -42,5 +42,3 @@ public:
 		return res;    
     }
 };
-    
- 
