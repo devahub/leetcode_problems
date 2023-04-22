@@ -7,7 +7,7 @@ public:
         int maxi=0;
         
         while(l<h){
-            int lh=height[l];
+              int lh=height[l];
               int rh=height[h];
               
               maxi=max(maxi,min(lh,rh)*(h-l));
@@ -19,8 +19,7 @@ public:
                   h--;
         }
     }
-        
-        return maxi;
+     return maxi;
         
     }
 };
