@@ -1,5 +1,6 @@
 class Solution {
 public:
+     
     string longestCommonPrefix(vector<string>& s) {
      string ans="";
         
