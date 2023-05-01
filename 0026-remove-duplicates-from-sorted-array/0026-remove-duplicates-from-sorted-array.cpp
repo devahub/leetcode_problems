@@ -1,7 +1,6 @@
 class Solution {
 public:
-    
-    // two pointer---->optimal solution
+   // two pointer---->optimal solution
     
     
     int removeDuplicates(vector<int>& nums) {
