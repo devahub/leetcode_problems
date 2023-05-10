@@ -6,6 +6,7 @@ public:
 //         vector<int> v;
 //         unordered_map<int,int> mp;
         
+    
 //         for(int i=0;i<nums.size();i++)
 //         {
 //             if(mp.find(target-nums[i])!=mp.end())
@@ -38,7 +39,7 @@ public:
          
 		sort(v.begin(),v.end());
 
-        int l=0;
+         int l=0;
          int h=n-1;
          
          while(l<h){
