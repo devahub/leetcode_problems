@@ -49,6 +49,7 @@ public:
     int maxProfit(vector<int>& prices) {
         int ans = 0;
         stack<int>st;
+        
         for(int i = 0 ; i < prices.size() ; i++){
             if(st.empty()) 
                 st.push(prices[i]);
