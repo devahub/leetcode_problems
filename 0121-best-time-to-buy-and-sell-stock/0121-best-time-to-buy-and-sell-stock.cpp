@@ -50,9 +50,11 @@ public:
         int ans = 0;
         stack<int>st;
         for(int i = 0 ; i < prices.size() ; i++){
-            if(st.empty()) st.push(prices[i]);
+            if(st.empty()) 
+                st.push(prices[i]);
             else{
-                if(prices[i] > st.top()) ans = max(ans,prices[i]-st.top());
+                if(prices[i] > st.top()) 
+                    ans = max(ans,prices[i]-st.top());
                 else{
                     while(!st.empty() and st.top()>prices[i])st.pop();
                     st.push(prices[i]);
