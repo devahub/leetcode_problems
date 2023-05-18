@@ -10,8 +10,9 @@ public:
     
     
     int longestConsecutive(vector<int>& nums) {
-          int n=nums.size();
-    if(n==0) return 0;
+        int n=nums.size();
+    
+        if(n==0) return 0;
     sort(nums.begin(),nums.end());
     int count=1;
     int ans=1;
