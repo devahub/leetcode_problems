@@ -1,6 +1,6 @@
 class Solution {
 public:
-    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+   vector<int> spiralOrder(vector<vector<int>>& matrix) {
         vector<int>v;
         
         int t=0;
@@ -38,4 +38,4 @@ public:
         return v;
         
     }
-};
+}; 
