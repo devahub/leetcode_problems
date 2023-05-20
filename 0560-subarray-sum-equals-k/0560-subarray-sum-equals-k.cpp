@@ -37,8 +37,16 @@ public:
          for(int i=0;i<n;i++){
             currSum += nums[i];
             
-            if(currSum == k) c++;
-            if(mp[currSum-k]!=0) c += mp[currSum-k];
+            if(currSum == k) 
+            {
+                c++;
+            }
+             
+            if(mp[currSum-k]!=0) 
+            {
+                c += mp[currSum-k];
+            }
+             
             mp[currSum]++;
         }
         return c;
