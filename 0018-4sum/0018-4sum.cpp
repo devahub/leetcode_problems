@@ -1,44 +1,32 @@
 class Solution {
 public:
-    
-           // brute force----->     
-//     vector<vector<int>> fourSum(vector<int>& nums, int target) {
-//          int n=nums.size();
-//         sort(nums.begin(),nums.end());
-//         set<vector<int>>sv;
-//         for(int i=0;i<n;i++){
-            
-//             for(int j=i+1;j<n;j++){
-                
-//                 for(int k=j+1;k<n;k++){
-                    
-//                     int chk=(long long)target-((long long)nums[i]+(long long)nums[j]+(long long)nums[k]);
-                    
-//                     if(binary_search(nums.begin()+k+1,nums.end(),chk)){
-                        
-//                         vector<int>v;
-//                         v.push_back(nums[i]);
-//                         v.push_back(nums[j]);
-//                         v.push_back(nums[k]);
-//                         v.push_back(chk);
-                        
-                        
-//                         sort(v.begin(),v.end());
-//                         sv.insert(v);
+//    vector<vector<int>> fourSum(vector<int>& nums, int target) {
+//         int n = nums.size();
+//         sort(nums.begin(), nums.end());
+//         set<vector<int>> set;
+//         vector<vector<int>> output;
+//         for(int i=0; i<n-3; i++){
+//             for(int j=i+1; j<n-2; j++){
+//                 for(int k=j+1; k<n-1; k++){
+//                     for(int l=k+1; l<n; l++){
+//                         if((long long)nums[i] + (long long)nums[j] + (long long)nums[k] + 
+//                         (long long)nums[l] == target){
+//                             set.insert({nums[i], nums[j], nums[k], nums[l]});
+//                         }
 //                     }
 //                 }
 //             }
-//             }
-//         vector<vector<int>>ans(sv.begin(),sv.end());
-//         if(ans.size()>1){
-//             return ans;
 //         }
-//         return {};
-        
+//         for(auto it : set){
+//             output.push_back(it);
+//         }
+//         return output;
 //     }
 // };
-            
-    // two pointer approach---->
+    
+    
+    
+    
     
      vector<vector<int>> fourSum(vector<int>& nums, int target){
             vector<vector<int>> ans;
@@ -92,6 +80,3 @@ public:
         return ans;
      }
 };
-    
-    
-    
