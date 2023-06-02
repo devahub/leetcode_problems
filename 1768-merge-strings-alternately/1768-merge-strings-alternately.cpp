@@ -7,11 +7,11 @@ public:
        int d=max(n1,n2);
         
         for(int i=0;i<d;i++){
-           if(n1){
+           if(n1>0){
                res+=word1[i];
                n1--;
            }
-            if(n2){
+            if(n2>0){
                 res+=word2[i];
                 n2--;
             }
