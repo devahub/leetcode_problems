@@ -1,13 +1,14 @@
 class Solution {
 public:
+    // recurssive
     
-    // using recurssion--->
     
-//     int solve(vector<int>& prices,int i,int buy){
-//             if(i==prices.size()){
+//     int solve(vector<int>& prices,int i,int buy)
+//     {
+//            if(i==prices.size()){
 //                 return 0;
 //             }
-//         if(buy){
+//          if(buy!=0){
 //             int buy=-prices[i]+solve(prices,i+1,0);
 //             int nbuy=solve(prices,i+1,1);
 //             return max(buy,nbuy);
@@ -18,16 +19,17 @@ public:
 //             int nsell=solve(prices,i+1,0);
 //             return max(sell,nsell);
 //         }
+        
+        
 //     }
-
+    
 //     int maxProfit(vector<int>& prices) {
-//         return solve(prices,0,1);
+//     return solve(prices,0,1);    
 //     }
 // };
     
     
-    
-    /// dp --->changing parameters are index and buy
+      /// dp --->changing parameters are index and buy
     
         int solve(vector<int>& prices,int i,int buy,vector<vector<int>>&dp){
             int pro1=INT_MIN;
@@ -60,3 +62,7 @@ public:
         return solve(prices,0,1,dp);
     }
 };
+    
+    
+    
+    
