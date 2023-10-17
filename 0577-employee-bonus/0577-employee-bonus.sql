@@ -1,0 +1,1 @@
+select name,bonus from Employee left join Bonus using(empid) WHERE COALESCE(bonus, 0) < 1000; 
