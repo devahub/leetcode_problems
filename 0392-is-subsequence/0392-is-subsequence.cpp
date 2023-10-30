@@ -1,7 +1,6 @@
 class Solution {
 public:
-    
-    // using two pointer-----> 
+     // using two pointer-----> 
     
 //     bool isSubsequence(string s, string t) {
     
@@ -40,6 +39,7 @@ public:
          
          if(m >  n)
             return false;
+        
          vector<vector<int>> dp(m+1,vector<int> (n+1,-1));
          
          if(solve(s,t,m,n,dp)==s.size()){
@@ -49,5 +49,4 @@ public:
          
          
      }
-};
-    
+}; 
