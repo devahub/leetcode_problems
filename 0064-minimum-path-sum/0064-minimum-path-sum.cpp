@@ -1,10 +1,7 @@
 class Solution {
 public:
 
-    
-     
     int solve(vector<vector<int>>& mat,int m, int n,int i,int j,vector<vector<int>>&dp){
-        
         
         if(i==m-1 && j==n-1)
              return mat[i][j];
