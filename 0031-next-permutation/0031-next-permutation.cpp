@@ -9,34 +9,34 @@
 
 class Solution {
 public:
-//     void nextPermutation(vector<int>& nums) {
-//         int br=-1;
+    void nextPermutation(vector<int>& nums) {
+        int br=-1;
             
-//         for(int i=nums.size()-1;i>0;i--){
-//             if(nums[i]>nums[i-1]){
-//                 br=i-1;
-//                 break;
-//              }
-//         }
-//         if(br<0){
-//             reverse(nums.begin(),nums.end());
-//         return ;
-//         }
+        for(int i=nums.size()-1;i>0;i--){
+            if(nums[i]>nums[i-1]){
+                br=i-1;
+                break;
+             }
+        }
+        if(br<0){
+            reverse(nums.begin(),nums.end());
+        return ;
+        }
             
-//         for(int i=nums.size()-1;i>0;i--){
-//             if(nums[i]>nums[br]){
-//                 swap(nums[i],nums[br]);
-//                 reverse(nums.begin()+br+1,nums.end());
-//                 break;
-//             }
+        for(int i=nums.size()-1;i>0;i--){
+            if(nums[i]>nums[br]){
+                swap(nums[i],nums[br]);
+                reverse(nums.begin()+br+1,nums.end());
+                break;
+            }
             
-//         }
-//     }
-// };
-    
-     void nextPermutation(vector<int>& nums){
-      next_permutation(nums.begin(),nums.end());
-     }
+        }
+    }
 };
+    
+//      void nextPermutation(vector<int>& nums){
+//       next_permutation(nums.begin(),nums.end());
+//      }
+// };
     
     
