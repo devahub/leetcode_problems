@@ -1,26 +1,27 @@
 class Solution {
 public:
+    
     // recurssive
     
     
 //     int solve(vector<int>& prices,int i,int buy)
 //     {
-//            if(i==prices.size()){
+//          if(i==prices.size()){
 //                 return 0;
 //             }
-//          if(buy!=0){
+        
+//          if(buy!=0){                    // if buy already
 //             int buy=-prices[i]+solve(prices,i+1,0);
 //             int nbuy=solve(prices,i+1,1);
 //             return max(buy,nbuy);
 //         }
+    
 //         else{
             
 //             int sell=+prices[i]+solve(prices,i+1,1);
 //             int nsell=solve(prices,i+1,0);
 //             return max(sell,nsell);
 //         }
-        
-        
 //     }
     
 //     int maxProfit(vector<int>& prices) {
