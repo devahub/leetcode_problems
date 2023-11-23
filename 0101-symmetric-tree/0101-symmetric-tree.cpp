@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    bool solve(TreeNode* left,TreeNode* right){
+ bool solve(TreeNode* left,TreeNode* right){
         
        if(left==NULL && right==NULL)
             return true;
