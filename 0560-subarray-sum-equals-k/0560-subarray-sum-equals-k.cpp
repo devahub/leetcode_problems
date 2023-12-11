@@ -2,7 +2,7 @@ class Solution {
 public:
      // brut force---->
     
-  // brut force---->
+ // brut force---->
     
 //     int subarraySum(vector<int>& nums, int k)
 //     {
