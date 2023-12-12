@@ -1,5 +1,6 @@
 class Solution {
 public:
+  
     
 //     int majorityElement(vector<int>& nums) {
 //        map<int,int>mp;
@@ -32,7 +33,8 @@ public:
         if(nums[i]==ele)
             count++;
         else count--;
-    } 
+      } 
+        
         return ele;
     }
-};
+}; 
