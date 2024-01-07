@@ -1,5 +1,7 @@
 class Solution {
 public:
+    
+    
     bool canJump(vector<int>& nums) {
         int n=nums.size();
         int mr=0;
@@ -11,8 +13,6 @@ public:
             }    
             
             mr=max(mr,i+nums[i]);
-            
-
         }
         return true;
     }
