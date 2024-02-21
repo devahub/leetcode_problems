@@ -1,6 +1,12 @@
 class Solution {
 public:
      
+    //  1234567
+    //  4321567
+    //  4321765
+    
+
+    
     void reverse(vector<int>&nums,int i,int j)
     {
         int l=i;
@@ -14,6 +20,9 @@ public:
             r--;
         }
     }  
+   
+    
+    
     
     void rotate(vector<int>& nums, int k) {
        
