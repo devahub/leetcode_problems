@@ -19,10 +19,13 @@ public:
         while(!q.empty())
         {
             int count=q.size();
+            
+            
             for(int i=0;i<count;i++)
             {
                 TreeNode* curr=q.front();
                 q.pop();
+                
                 if(i==0)
                     last=curr->val;     //last leftMost val
                 if(curr->left)
