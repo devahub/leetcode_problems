@@ -1,39 +1,6 @@
 class Solution {
 public:
     
-    // two pointer approach
-    
-//     int bagOfTokensScore(vector<int>& tokens, int power) {
-//         sort(tokens.begin(),tokens.end());
-//         int i=0;
-//         int j=tokens.size()-1;
-//         int score=0;
-//         int ans=0;
-        
-//         while(i<=j){
-//             if(tokens[i]<=power){
-//                 score+=1;
-//                 power=power-tokens[i];
-//                 i++;
-//                 ans=max(ans,score);
-//         }
-//             else if(score>0){
-//                 power=power+tokens[j];
-//                 score-=1;
-//                 j--;
-//             }
-//        else{
-//             break;
-//         }
-//        }
-//         return ans;     
-//     }
-// };
-    
-    
-    
-    
-    ///  using dp------->
     
     int dp[1005];
     int solve(int power, int score, vector<int>&token, int i, int l){
