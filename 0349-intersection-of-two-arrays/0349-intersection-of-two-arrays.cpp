@@ -12,7 +12,7 @@ public:
         if(mp.find(nums2[i])!=mp.end()){
             if(mp[nums2[i]]!=0)             //condn is used to prevent from repeated nos
                 v.push_back(nums2[i]);
-            mp[nums2[i]]=0;
+                mp[nums2[i]]=0;      // to avoid duplicacy
         }    
         }   
         return v;
