@@ -32,18 +32,21 @@ public:
    ///  using dp  
     
     vector<int> productExceptSelf(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> output(n);
-        output[0] = 1;
-        for(int i=1; i<n; i++){
-            output[i] = output[i-1] * nums[i-1];
+         int n = nums.size();
+        vector<int> output(n, 1);
+
+        int left_prod = 1;
+        for(int i = 1; i < n; i++) {
+            left_prod *= nums[i-1];
+            output[i] *= left_prod;
         }
-        
-        int right = 1;
-        for(int i=n-1; i>=0; i--){
-            output[i] *= right;
-            right *= nums[i];
+
+        int right_prod = 1;
+        for(int i = n-2; i >= 0; i--) {
+            right_prod *= nums[i+1];
+            output[i] *= right_prod;
         }
+
         return output;
     }
 };
@@ -51,10 +54,13 @@ public:
 
 
 
- //    [1,2,3,4]
+ //    [1,2,3,4]  output    [1,]    [1*1  1*1 1*2  2*3]  
  
- //   1,1,2,6
- //   24,12,4,1
+ //  [1,1,1,1]
+//   [1 1 2 6] 
+//   [6,2,1,1]
+//   [4,3,2,1]
+ //   24,12,8,6
 
     
     
