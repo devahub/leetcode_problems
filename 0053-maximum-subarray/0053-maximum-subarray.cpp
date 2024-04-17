@@ -1,6 +1,9 @@
 class Solution {
 public:
+    
+    
     // kadanes algo
+    
     
     int maxSubArray(vector<int>& nums) {
         int maxi=INT_MIN;
@@ -19,3 +22,32 @@ public:
         return maxi;
     }
 };
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
